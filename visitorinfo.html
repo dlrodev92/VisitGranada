@@ -3,47 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VisitGranada - Info</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Link to global CSS file -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
-    <link rel="stylesheet" href="css/[page-specific].css"> <!-- Link to page-specific CSS -->
+    <title>VisitGranada - Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/visitorinfo.css"> 
+    <meta name="description" content="Plan your visit to Granada with essential travel tips, accommodations, and local recommendations for a memorable experience.">
+
+    <meta name="keywords" content="Granada visitor information, Granada travel tips, Granada accommodations, travel guide Granada, visiting Granada">
+
+    
 </head>
 <body>
-    <!-- Header -->
+
     <header>
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
-                <li><a href="culture.html">Culture</a></li>
-                <li><a href="visitorinfo.html">Visitor Info</a></li>
-                <li><a href="granadacf.html">Granada CF</a></li>
+                <li>
+                    <a href="index.html" data-tooltip="Home">
+                        <span class="nav-text">Home</span> 
+                        <span class="material-icons nav-icon">
+                            home
+                        </span> 
+                    </a> 
+                    
+                </li>
+                <li>
+                    <a href="history.html" data-tooltip="History">
+                        <span class="nav-text">History</span> 
+                        <span class="material-icons nav-icon">
+                            history
+                        </span> 
+                    </a> 
+                    
+                </li>
+                <li>
+                    <a href="attractions.html" data-tooltip="Attractions">
+                        <span class="nav-text">Attractions</span> 
+                        <span class="material-icons nav-icon">
+                            tour
+                        </span>
+                    </a> 
+                    
+                 </li>
+                <li>
+                    <a href="culture.html" data-tooltip="Culture ">
+                        <span class="nav-text">Culture</span> 
+                        <span class="material-icons nav-icon">
+                            menu_book
+                        </span>
+                    </a> 
+                   
+                 </li>
+                <li>
+                    <a href="visitorinfo.html" data-tooltip="Visitor Info">
+                        <span class="nav-text">Visitor Info</span> 
+                        <span class="material-icons nav-icon">
+                            info
+                        </span>
+                    </a> 
+                    
+                 </li>
+                <li>
+                    <a href="granadacf.html" data-tooltip="GranadaCF">
+                        <span class="nav-text">Granada CF</span> 
+                        <span class="material-icons nav-icon">
+                            sports_soccer
+                        </span>
+                    </a> 
+            
+                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
+  
     <main>
-        <section class="hero">
-            <h1>[Page-Specific Heading]</h1>
-            <p>[Brief introduction or tagline related to this page]</p>
+
+        <section class="hero visitor-hero">
+            <img src="assets/images/visitor-info-hero.png" alt="hero image">
+            
+            <div>   
+                <h1>Your Guide to Visiting Granada</h1>
+                
+                <p>Planning your journey to Granada? Whether you’re looking for travel tips, top accommodations, or hidden gems, we’ve got you covered. Start your adventure on the right foot with all the essential visitor information.</p>
+                
+                
+                <blockquote>
+                    "Give him alms, woman, for there is nothing in life as sorrowful as being blind in Granada."
+                    – Francisco de Icaza</blockquote>
+            </div>
+        </section>    
+        
+        
+        
+        <section class="visitor-info">
+           
+            <div class="reminders">
+                <h2>Travel Reminders</h2>
+                <ul>
+                    <li>Check travel documents (passport, ID) and ensure they're valid.</li>
+                    <li>Book accommodations in advance, especially during peak season.</li>
+                    <li>Bring comfortable walking shoes; Granada has many cobbled streets.</li>
+                    <li>Download offline maps or ensure internet access for navigation.</li>
+                    <li>Consider booking tickets for major attractions, like the Alhambra, beforehand. They might take months of queues to buy them</li>
+                </ul>
+                <a href="https://www.juntadeandalucia.es/turismoydeporte/ctrjal/destinosturisticosaccesibles/es/granada/oficina-municipal-de-informacion-turistica-de-granada" target="blank" class="cta">Visit Granada Tourist Office</a>
+            </div>
+
+            
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.734731237546!2d-3.6002222850012096!3d37.17733697987467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcbf62c943d9%3A0x9a4f12b5d5c04f92!2sOficina%20de%20Turismo%20de%20Granada!5e0!3m2!1sen!2ses!4v1616090368832!5m2!1sen!2ses"
+                    loading="lazy"></iframe>
+            </div>
         </section>
 
-        <!-- Content Section -->
-        <section class="content">
-            <!-- Page-specific content goes here -->
-        </section>
+        <div class="arrow-navigator-container">
+
+            <a href="culture.html" class="arrow-left" data-tooltip="Culture">
+                <span class="material-icons">
+                    chevron_left
+                </span>
+            </a>
+            <a href="#" class="back-to-top" data-tooltip="Back to Top">
+                <span class="material-icons">
+                    arrow_upward
+                </span>
+            </a>
+            <a href="granadacf.html" class="arrow-right" data-tooltip="GranadaCF">
+                <span class="material-icons">
+                    chevron_right
+                </span>
+            </a>
+
+        </div>
+       
     </main>
 
-    <!-- Footer -->
+    
     <footer>
         <p>&copy; 2024 Granada Tour Guide. All rights reserved.</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com/"><span class="material-icons">facebook</span></a>
-            <a href="https://instagram.com/"><span class="material-icons">instagram</span></a>
-            <a href="https://x.com/"><span class="material-icons">X</span></a>
-        </p>
+        <div>
+            Follow us on:
+            <ul class="footer-items-container">
+
+            <li>
+                <a href="https://www.facebook.com/">
+                    <span class="material-icons">
+                        facebook
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://instagram.com/">
+                    <span class="material-icons">
+                        instagram
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://x.com/">
+                    <span class="material-icons">
+                        X
+                    </span>
+                </a>
+            </li>
+
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

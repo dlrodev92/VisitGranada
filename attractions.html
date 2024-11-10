@@ -4,46 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VisitGranada - Attractions</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Link to global CSS file -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
-    <link rel="stylesheet" href="css/[page-specific].css"> <!-- Link to page-specific CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/attractions.css"> 
+    <meta name="description" content="Discover the top attractions in Granada, including the Alhambra, Albaicín, and more. A guide to Granada’s must-visit sites.">
+    <meta name="keywords" content="Granada attractions, things to do in Granada, Alhambra, Albaicín, Granada tourist sites, must-see places Granada">
+
 </head>
 <body>
-    <!-- Header -->
+
     <header>
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
-                <li><a href="culture.html">Culture</a></li>
-                <li><a href="visitorinfo.html">Visitor Info</a></li>
-                <li><a href="granadacf.html">Granada CF</a></li>
+                <li>
+                    <a href="index.html" data-tooltip="Home">
+                        <span class="nav-text">Home</span> 
+                        <span class="material-icons nav-icon">
+                            home
+                        </span> 
+                    </a> 
+                    
+                </li>
+                <li>
+                    <a href="history.html" data-tooltip="History">
+                        <span class="nav-text">History</span> 
+                        <span class="material-icons nav-icon">
+                            history
+                        </span> 
+                    </a> 
+                    
+                </li>
+                <li>
+                    <a href="attractions.html" data-tooltip="Attractions">
+                        <span class="nav-text">Attractions</span> 
+                        <span class="material-icons nav-icon">
+                            tour
+                        </span>
+                    </a> 
+                    
+                 </li>
+                <li>
+                    <a href="culture.html" data-tooltip="Culture ">
+                        <span class="nav-text">Culture</span> 
+                        <span class="material-icons nav-icon">
+                            menu_book
+                        </span>
+                    </a> 
+                   
+                 </li>
+                <li>
+                    <a href="visitorinfo.html" data-tooltip="Visitor Info">
+                        <span class="nav-text">Visitor Info</span> 
+                        <span class="material-icons nav-icon">
+                            info
+                        </span>
+                    </a> 
+                    
+                 </li>
+                <li>
+                    <a href="granadacf.html" data-tooltip="GranadaCF">
+                        <span class="nav-text">Granada CF</span> 
+                        <span class="material-icons nav-icon">
+                            sports_soccer
+                        </span>
+                    </a> 
+            
+                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
+  
     <main>
-        <section class="hero">
-            <h1>[Page-Specific Heading]</h1>
-            <p>[Brief introduction or tagline related to this page]</p>
+
+        <section class="hero attractions-hero">
+            <img src="assets/images/attractions-hero.png" alt="hero image">
+            
+            <div>   
+                <h1>Explore Granada’s Unforgettable Attractions</h1>
+                
+                <p>From the awe-inspiring Alhambra to the charming neighborhoods of Albaicín, Granada’s attractions are a feast for the senses. Ready to wander through wonders that blend nature, art, and history seamlessly?</p>
+                
+                
+                <blockquote>"The Alhambra alone is worth a journey across the world." – Washington Irving</blockquote>
+            </div>
+        </section>
+        <section class="attractions-grid">
+            
+            <div class="attraction">
+                <img src="assets/images/alhambra.jpg" alt="Alhambra">
+                <h2>Alhambra</h2>
+                <p>An iconic palace and fortress that showcases exquisite Islamic architecture and breathtaking gardens.</p>
+                <a href="https://alhambra-entradas.org/en/?gad_source=1&gclid=Cj0KCQiArby5BhCDARIsAIJvjIR9ghl_dGkDxf_HZx-zezaj_a4Vm9Siyt_RmYUeRyfpdg7oQhNJs5oaArYZEALw_wcB" target="blank" class="cta">Learn more</a>
+            </div>
+    
+            
+            <div class="attraction">
+                <img src="assets/images/carlos-v.jpg" alt="Palacio de Carlos V">
+                <h2>Palacio de Carlos V</h2>
+                <p>This Renaissance palace within the Alhambra complex was commissioned by Emperor Charles V and is known for its unique circular courtyard.</p>
+                <a href="https://www.alhambra-patronato.es/edificios-lugares/palacio-de-carlos-v" target="blank" class="cta">Learn more</a>
+            </div>
+    
+            
+            <div class="attraction">
+                <img src="assets/images/sierra-nevada.jpeg" alt="Sierra Nevada">
+                <h2>Sierra Nevada</h2>
+                <p>A beautiful mountain range that’s perfect for skiing in winter and hiking in summer, offering stunning views of Granada.</p>
+                <a href="https://sierranevada.es/en/" target="blank" class="cta">Learn more</a>
+            </div>
+    
+           
+            <div class="attraction">
+                <img src="assets/images/albaicin.jpg" alt="Albaicín">
+                <h2>Albaicín</h2>
+                <p>Granada’s historic Moorish quarter with narrow streets, whitewashed houses, and a rich cultural ambiance.</p>
+                <a href="https://www.andalucia.org/en/granada-cultural-tourism-albaycin-antiguo-barrio-arabe" target="blank" class="cta">Learn more</a>
+            </div>
+    
+            
+            <div class="attraction">
+                <img src="assets/images/generalife.jpg" alt="Generalife Gardens">
+                <h2>Generalife Gardens</h2>
+                <p>The summer palace and gardens of the Nasrid rulers, offering a peaceful retreat with lush greenery and fountains.</p>
+                <a href="https://tickets.alhambra-patronato.es/en/producto/gardens-generalife-and-alcazaba/" target="blank" class="cta">Learn more</a>
+            </div>
+    
+            
+            <div class="attraction">
+                <img src="assets/images/mirador-san-nicolas.jpg" alt="Mirador de San Nicolás">
+                <h2>Mirador de San Nicolás</h2>
+                <p>A popular viewpoint in the Albaicín offering stunning panoramic views of the Alhambra against the backdrop of Sierra Nevada.</p>
+                <a href="https://www.lovegranada.com/places/mirador-san-nicolas/" target="blank" class="cta">Learn more</a>
+            </div>
         </section>
 
-        <!-- Content Section -->
-        <section class="content">
-            <!-- Page-specific content goes here -->
-        </section>
+        <div class="arrow-navigator-container">
+
+            <a href="history.html" class="arrow-left" data-tooltip="History">
+                <span class="material-icons">
+                    chevron_left
+                </span>
+            </a>
+            <a href="#" class="back-to-top" data-tooltip="Back to Top">
+                <span class="material-icons">
+                    arrow_upward
+                </span>
+            </a>
+            <a href="culture.html" class="arrow-right" data-tooltip="Culture">
+                <span class="material-icons">
+                    chevron_right
+                </span>
+            </a>
+
+        </div>
+        
+        
     </main>
 
-    <!-- Footer -->
+    
     <footer>
-        <p>&copy; 2024 VisitGranada. All rights reserved.</p>
-        <p>Follow us on:
-            <a href="https://www.facebook.com/"><span class="material-icons">facebook</span></a>
-            <a href="https://instagram.com/"><span class="material-icons">instagram</span></a>
-            <a href="https://x.com/"><span class="material-icons">X</span></a>
-        </p>
+        <p>&copy; 2024 Granada Tour Guide. All rights reserved.</p>
+        <div>
+            Follow us on:
+            <ul class="footer-items-container">
+
+            <li>
+                <a href="https://www.facebook.com/">
+                    <span class="material-icons">
+                        facebook
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://instagram.com/">
+                    <span class="material-icons">
+                        instagram
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://x.com/">
+                    <span class="material-icons">
+                        X
+                    </span>
+                </a>
+            </li>
+
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

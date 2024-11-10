@@ -1,0 +1,79 @@
+@import url("main.css");
+
+
+.history-hero{
+    height: 70vh;
+    p{
+       padding: 4px;
+       border-radius: 4px;
+        background-color: #2827274f;  
+    }
+
+    blockquote {
+        width: 80%;
+        color: var(--vibrant-teal);
+        font-weight: bolder;
+        background-color: #f3f3f3e9; 
+        text-shadow: none;
+        padding: 4px;
+        border-radius: 4px;
+    }
+}
+
+/* Styling for History Sections */
+.history-section {
+    margin-top: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--pale-mint);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 75%;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.section-content img {
+    width: 200px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-section h2 {
+    color: var(--steel-gray);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.history-section p {
+    color: var(--steel-gray);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .history-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+

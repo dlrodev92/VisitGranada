@@ -1,13 +1,11 @@
 
-
-/* 1. Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
 
-/* 2. CSS Variables for Colors and Fonts */
+/*  Global Variables*/
 :root {
     --white-bg: #ffffff;
     --vibrant-teal: #3AB7A9;
-    --electric-orange: #FF6B35;
+    --electric-red: #ef233c;
     --soft-yellow: #FFDD57;
     --steel-gray: #444B6E;
     --pale-mint: #E6FAF5;
@@ -17,11 +15,11 @@
     --base-font-size: 16px;
     --heading-font-weight: 600;
     --text-font-weight: 400;
-    --border-radius: 6px;
+    --border-radius: 10px;
     --transition-speed: 0.3s;
 }
 
-/* 3. Global Styles */
+/*  Global Styles */
 *,
 *::before,
 *::after {
@@ -29,6 +27,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body {
     display: grid;
@@ -46,147 +46,202 @@ body {
     min-height: 100vh;
 }
 
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--steel-gray);
     font-weight: var(--heading-font-weight);
 }
 
-a {
-    color: var(--vibrant-teal);
+a{
+    color: var(--steel-gray);
     text-decoration: none;
-    transition: color var(--transition-speed);
 }
 
-a:hover {
-    color: var(--soft-yellow);
-}
-
-/* 4. Container and Layout Classes */
+/* Container and Layout Classes */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* 5. Navbar Styles */
+/* Navbar Styles */
 header {
     grid-area: header;
     background-color: var(--pale-mint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-list {
     display: flex;
     gap: 1rem;
     list-style: none;
+    li{
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a{
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-speed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:hover {
+        color: var(--pale-mint);
+    }
+
+    li:hover{
+        background-color: var(--electric-red);
+        transform: scale(1.2);
+    }
+
+    .nav-icon{
+        display: none;
+   }
 }
 
-.nav-list a {
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    transition: background-color var(--transition-speed);
-}
 
-.nav-list a:hover {
-    background-color: var(--soft-yellow);
-    color: var(--pale-mint);
-}
-
-/* 6. Button Styles */
-button, .button {
-    background-color: var(--vibrant-teal);
-    color: var(--white-bg);
-    font-weight: var(--text-font-weight);
-    border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
-}
-
-button:hover, .button:hover {
-    background-color: var(--electric-orange);
-    transform: translateY(-3px);
-}
-
-/* 7. Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-/* 8. Utility Classes */
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 0.5s ease-in-out;
-}
-
-/* 9. Hover Effects */
-.icon-hover:hover {
-    color: var(--soft-yellow);
-    transform: scale(1.1);
-}
-
-/* 10. Hero Section */
 .hero {
-    background-color: var(--pale-mint);
-    color: var(--steel-gray);
-    padding: 2rem;
+    width: 100%;
+    height: 65vh;
+    position: relative; 
+    z-index: 1;
+    animation: scaleUp 0.8s forwards;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+    }
+
+    div{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: white; 
     text-align: center;
-    border-radius: var(--border-radius);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    
+        h1{
+             
+            font-size: 3rem;
+            color:var(--white-bg)
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-wrap: wrap;
+            width: 80%;
+            padding: 5px;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);  }
+    }
+
+    box-shadow: 0 20px 20px -10px var(--pale-mint);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    color: var(--vibrant-teal);
-}
 
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: var(--steel-gray);
-}
-
-/* Footer */
 footer {
     grid-area: footer;
+    height: 110px;
     background-color: var(--steel-gray);
     color: var(--white-bg);
     text-align: center;
     padding: 1rem;
-}
-
-/* Footer Social Links Styling */
-footer p a {
-    color: var(--white-bg);
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
-
-footer p a:hover {
-    color: var(--vibrant-teal);
-}
-
-/* Media Queries for Responsiveness */
-
-/* Large Screens */
-@media (min-width: 992px) {
-    :root {
-        --base-font-size: 18px;
+    a{
+        color: var(--vibrant-teal);
+        transition: ease 0.3s;
     }
-    .hero {
-        padding: 3rem;
+    a:hover{
+        color: var(--pale-mint);
     }
 }
+.footer-items-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
 
-/* Tablets and Medium Screens: Sidebar Navigation */
+.arrow-navigator-container{
+    width: 40%;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        padding: 20px;
+        width: 5%;
+        height: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        background-color: var(--vibrant-teal);
+        color: var(--white-bg);
+        border: none;
+        cursor: pointer;
+        transition: background-color var(--transition-speed), transform var(--transition-speed);
+        font-weight: bolder;
+        transition: ease 0.3s;
+    }
+    a:hover{
+        background-color: var(--pale-mint);
+        color:var(--vibrant-teal);
+        transform: translate(0, -5px);
+    }
+    a:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: 100%;
+        transform: translateY(-50%);
+        margin-left: 5px; 
+        background-color: var(--electric-red);
+        color: var(--white-bg);
+        padding: 0.1rem 0.2rem;
+        border-radius: var(--border-radius);
+        white-space: nowrap;
+        font-size: 0.7rem;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.2) rotate(-25deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* phone and tablet size. Responsive */
 @media (max-width: 991px) and (min-width: 768px) {
     :root {
         --base-font-size: 16px;
@@ -212,20 +267,58 @@ footer p a:hover {
         justify-content: center;
         flex-direction: column;
     }
+    nav{
+        height: 100%;
+        width:  100%;
+    }
 
     .nav-list {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        align-items: center ;
+        height: 100%;
+        width: 100%;
         flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
+        .nav-icon{
+            display: block;
+            
+        }
+      
+        .nav-text{
+            display: none;
+        }
+        a:hover{
+            color: var(--electric-red);
+        }
+        li:hover {
+            background-color: transparent;
+            transform: scale(1.2)
+            
+        }
     }
+
+    .hero div{
+        width: 100%;
+        
+        
+        h1{    
+            font-size: 2.5rem;
+            text-wrap: wrap;
+            width: 80%;
+        }
+    
+        p {
+            font-size: 1rem;
+            text-wrap: wrap;
+            width: 80%;
+        }
+    }
+   
 
     footer {
         grid-column: 2 / 3;
         grid-row: 2;
-    }
-
-    .hero {
-        padding: 2rem;
     }
 }
 
@@ -236,7 +329,7 @@ footer p a:hover {
     }
 
     body {
-        grid-template-columns: 45px 1fr ;
+        grid-template-columns: 65px 1fr ;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "header main"
@@ -255,27 +348,86 @@ footer p a:hover {
         justify-content: center;
         flex-direction: column;
     }
+    nav{
+        height: 100%;
+        width:  100%;
+    }
 
     .nav-list {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        align-items: center ;
+        height: 100%;
+        width: 100%;
         flex-direction: column;
-        align-items: center;
+        
+        .nav-icon{
+            display: block;
+            
+        }
+      
+        .nav-text{
+            display: none;
+        }
+
+        a {
+            position: relative;
+        }
+
+        a:hover{
+            color: var(--electric-red);
+        }
+
+        a:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            transform: translateY(-50%);
+            margin-left: 5px; 
+            background-color: var(--electric-red);
+            color: var(--white-bg);
+            padding: 0.1rem 0.2rem;
+            border-radius: var(--border-radius);
+            white-space: nowrap;
+            font-size: 0.5rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            
+        }
+
+
+        li:hover {
+            background-color: transparent;
+            transform: scale(1.2)
+            
+        } 
+    
     }
+
+    .hero div{
+        width: 100%;
+        
+        h1{    
+            font-size: 2rem;
+            text-wrap: wrap;
+            width: 80%;
+            
+        }
+    
+        p {
+            font-size: 1rem;
+            text-wrap: wrap;
+            width: 80%;
+        }
+    }
+    
 
     footer {
         grid-column: 2 / 3;
         grid-row: 2;
     }
 
-    .hero {
-        padding: 1.5rem;
-        font-size: 1.2rem;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
+    
 }
